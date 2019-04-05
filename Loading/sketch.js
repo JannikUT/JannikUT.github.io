@@ -1,4 +1,4 @@
-//sketch04 ( NYESTEEEEEEEEEE )
+
 var myRec = new p5.SpeechRec(); 
 	myRec.continuous = true; // continious recognition of input
 	myRec.interimResults = true;
@@ -46,7 +46,7 @@ image(img, 0, 0);
 }
 
 function draw() {
-
+	myRec.continuous = true; // continious recognition of input
 Random = Math.floor(Math.random() * 30) + 1  
 
 
@@ -147,10 +147,11 @@ function parseResult()
 		// To avoid detecting issues i only check for the most recent word.
 		var mostrecentword = myRec.resultString.split(' ').pop();
 		if(mostrecentword.indexOf("XXX")!==-1) { XXXX}
-		else if(mostrecentword.indexOf("you")!==-1) { Fuck(); }
+		else if(mostrecentword.indexOf("fuck")!==-1) { Fuck(); }
 		else if(mostrecentword.indexOf("beautiful")!==-1) {  Beautiful(); }
 		else if(mostrecentword.indexOf("sorry")!==-1) { Sorry(); }
 		else if(mostrecentword.indexOf("slow")!==-1) { Slow(); time = 3; }
+    else if(mostrecentword.indexOf("start")!==-1) { time = 1; }
     else if(mostrecentword.indexOf("begin")!==-1) { time = 1; }
     else if(mostrecentword.indexOf("next")!==-1) { time = 2; }
     else if(mostrecentword.indexOf("flower")!==-1) { tester(); }
